@@ -1,9 +1,9 @@
-import Header from "./Components/Header/Header";
+import Landing from "./Pages/Landing/Landing";
 
 function App() {
   return (
     <>
-      <Header />
+      <Landing />
     </>
   );
 }

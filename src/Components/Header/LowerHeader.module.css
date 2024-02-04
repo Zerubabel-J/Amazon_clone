@@ -1,0 +1,21 @@
+.lower__container {
+  background-color: #232f3e;
+  color: white;
+  margin: 0;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+}
+.lower__container ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+.lower__container ul li {
+  padding: 5px;
+}
+.lower__container ul li:first-child {
+}
