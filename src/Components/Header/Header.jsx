@@ -4,16 +4,24 @@ import mobileLogo from "../../assets/amazon-mobile-logo-white.png";
 import searchIcon from "../../assets/icons/search-icon.png";
 import cartIcon from "../../assets/icons/cart-icon.png";
 import LowerHeader from "./LowerHeader";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../DataProvider/DataProvider";
 
 const Header = () => {
+  const [{ basket }, dispatch] = useContext(DataContext);
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
+  console.log(basket.length);
   return (
-    <>
+    <section className="fixed">
       <div className="amazon-header">
         <div className="amazon-header-left-section">
-          <a href="amazon.html" className="header-link">
+          <Link to="/" className="header-link">
             <img className="amazon-logo" src={logo} />
             <img className="amazon-mobile-logo" src={mobileLogo} />
-          </a>
+          </Link>
           <a className="header-link">
             <div id="glow-ingress-block">
               <span
@@ -48,22 +56,20 @@ const Header = () => {
             <option value="">En</option>
           </section>
 
-          <a className="orders-link header-link" href="orders.html">
+          <Link className="orders-link header-link" to="/orders">
             <span className="returns-text">Returns</span>
             <span className="orders-text">& Orders</span>
-          </a>
+          </Link>
 
-          <a className="cart-link header-link" href="checkout.html">
+          <Link className="cart-link header-link" to="/cart">
             <img className="cart-icon" src={cartIcon} />
-            <div className="cart-quantity js-cart-quantity">0</div>
+            <div className="cart-quantity js-cart-quantity">{totalItem}</div>
             <div className="cart-text">Cart</div>
-          </a>
+          </Link>
         </div>
       </div>
-      <br />
-
       <LowerHeader />
-    </>
+    </section>
   );
 };
 

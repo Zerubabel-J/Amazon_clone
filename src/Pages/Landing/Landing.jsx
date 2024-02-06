@@ -1,6 +1,7 @@
 import LayOut from "../../Components/Layout/LayOut";
-import Category from "../../Components/Carousel/Category/Category";
+import Category from "../../Components/Category/Category";
 import CarouselEffect from "../../Components/Carousel/CarouselEffect";
+import Product from "../../Components/Product/Product";
 
 const Landing = () => {
   return (
@@ -8,6 +9,7 @@ const Landing = () => {
       <LayOut>
         <CarouselEffect />
         <Category />
+        <Product />
       </LayOut>
     </>
   );

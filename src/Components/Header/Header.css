@@ -3,16 +3,16 @@
   color: white;
   padding-left: 10px;
   padding-right: 10px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
+  z-index: 1;
 }
 
 .amazon-header-left-section {

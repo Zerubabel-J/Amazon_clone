@@ -2,10 +2,7 @@
   background-color: #232f3e;
   color: white;
   margin: 0;
-  position: fixed;
-  top: 60px;
-  left: 0;
-  right: 0;
+  position: relative;
 }
 .lower__container ul {
   list-style: none;
