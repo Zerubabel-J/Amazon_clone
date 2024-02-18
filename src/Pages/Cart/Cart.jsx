@@ -5,7 +5,7 @@ import ProductCard from "../../Components/Product/ProductCard";
 import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
 import { Link } from "react-router-dom";
 import classes from "./Cart.module.css";
-import { Type } from "../../Utitlity/action.type";
+import { Type } from "../../Utility/action.type";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosArrowUp } from "react-icons/io";
 const Cart = () => {
@@ -15,6 +15,8 @@ const Cart = () => {
     return item.price * item.price + amount;
   }, 0);
   console.log(total);
+  let test = 0;
+  console.log(test);
   const increment = (item) => {
     dispatch({
       type: Type.ADD_TO_BASKET,
