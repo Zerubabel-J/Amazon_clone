@@ -1,5 +1,6 @@
-/* eslint-disable react/prop-types */
 import Header from "../Header/Header";
+
+/* eslint-disable react/prop-types */
 const LayOut = ({ children }) => {
   return (
     <>

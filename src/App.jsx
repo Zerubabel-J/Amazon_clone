@@ -1,10 +1,10 @@
 import Routing from "./Router";
-import { DataProvider } from "./Components/DataProvider/DataProvider";
+import { DataProvider } from "./components/DataProvider/DataProvider";
 import React, { useContext, useEffect, useState } from "react";
 import { initialState, reducer } from "./Utility/reducer";
-import { DataContext } from "./Components/DataProvider/DataProvider";
-import { auth } from "./Utility/firebase";
-import { Type } from "./Utility/action.type";
+import { DataContext } from "./components/DataProvider/DataProvider";
+import { auth } from "./utility/firebase";
+import { Type } from "./utility/action.type";
 function App() {
   // const [{ user }, dispatch] = useContext(DataContext);
 
